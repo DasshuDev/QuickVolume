@@ -1,5 +1,5 @@
 # Quick Volume Controls
 
-Quickly change your volume level by holding Alt and using your scroll wheel! Use Shift to change SFX volume & Control for more precise control.
+Quickly change your volume level by holding <cg>Alt</c> and using your scroll wheel! Use <cj>Shift</c> to change SFX volume & <cy>CTRL</c> for more precise control.
 
 ![Screenshot of the mod in action](hjfod.quick-volume-controls/screenshot.png)

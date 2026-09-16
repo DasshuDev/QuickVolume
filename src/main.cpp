@@ -91,12 +91,15 @@ protected:
 
 public:
 	static VolumeControlOverlay* get() {
-		if (auto existing = CCScene::get()->getChildByID("overlay"_spr)) {
+		auto dir = CCDirector::sharedDirector();
+		auto padding = 10.f;
+		auto overlay = OverlayManager::get();
+		if (auto existing = overlay->getChildByID("overlay"_spr)) {
 			return static_cast<VolumeControlOverlay*>(existing);
 		}
 		auto create = VolumeControlOverlay::create();
 		create->setID("overlay"_spr);
-		CCScene::get()->addChildAtPosition(create, Anchor::BottomRight, ccp(-10, 10), false);
+		overlay->addChildAtPosition(create, Anchor::BottomRight, ccp(dir->getWinSize().width - padding, padding), true);
 		return create;
 	}
 
